@@ -1,0 +1,49 @@
+1. Make webpages interchange faster X
+2. Improve HTML/CSS elements
+3. Write actual script for go to top button X
+4. Input translated pages
+5. Make Images/media load faster
+6. Fix URLs
+7. Make webpage reactive to different devices (Bootstrap maybe)
+8. Create a Email system linking to my mom's webpage
+9. Blog Poster (Last priority)
+
+Begin: 9-28-2022 PST
+Week 1:
+Andy: 1,7
+Zeth: 3,6
+
+
+10-12-2022:
+Components needed:
+
+Homepage:
+	slideshow component
+	description
+
+	One Page Navigation(desription):
+	about us
+	product and services
+	contact us
+	media room
+
+About Us:
+Picture slideshow with moving text
+Milestones
+Company Philosophy
+products and services
+
+
+Products and Services:
+Nav Bar to different products
+components for each product type x 5
+Our servies (text div)
+
+Contact Us:
+Text div x 1
+
+Media Room:
+X
+
+Appendix:
+One text div
