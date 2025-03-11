@@ -1,0 +1,177 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/app/_not-found/page-fb8fca39b498832d.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/css/0784e5a3b20e2f3b.css",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/layout-078abce337bb20ca.js"
+    ],
+    "/animal-health-raw-materials/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/animal-health-raw-materials/page-dbe5db1ae83b56d9.js"
+    ],
+    "/about-us/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/about-us/page-a9d76f296e7f8f7d.js"
+    ],
+    "/contact-us/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/contact-us/page-4ebd2d7c9315140b.js"
+    ],
+    "/generic-products/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/generic-products/page-4fb611298cb8c033.js"
+    ],
+    "/media-room/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/media-room/page-841f852ddcb357c5.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/page-267f35d968071eb7.js"
+    ],
+    "/services/registration-services/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/services/registration-services/page-f2d9d47b527cfba3.js"
+    ],
+    "/services/market-intelligence/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/services/market-intelligence/page-7ddaa91c62e1d6df.js"
+    ],
+    "/appendix/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/appendix/page-294cb368acdc8e6e.js"
+    ],
+    "/services/supply-chain-management/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/services/supply-chain-management/page-1d2ca68a47b0a951.js"
+    ],
+    "/services/supply-chain-solutions/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/services/supply-chain-solutions/page-94c67e50e3ad2815.js"
+    ],
+    "/high-performance-chemicals/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/high-performance-chemicals/page-3d3188cc46c24106.js"
+    ],
+    "/products-and-services/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/557-41b75db60d6e058d.js",
+      "static/chunks/app/products-and-services/page-e9dc1b801324adb8.js"
+    ],
+    "/services/agricultural-consulting/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/services/agricultural-consulting/page-a7cf3b45562e0ef5.js"
+    ],
+    "/specialty-products/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/specialty-products/page-fa20c56d7d25e6d4.js"
+    ],
+    "/fertilizer-raw-materials/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/fertilizer-raw-materials/page-3a6d26fb007fe8d1.js"
+    ],
+    "/services/crop-trading/page": [
+      "static/chunks/webpack-b114da764e712a6e.js",
+      "static/chunks/4bd1b696-fe40fb2833894572.js",
+      "static/chunks/684-d8bd37c976cc0328.js",
+      "static/chunks/main-app-6324ae97405938d6.js",
+      "static/chunks/766-765ae96d25dc3ede.js",
+      "static/chunks/874-082c46ca92b9d10e.js",
+      "static/chunks/app/services/crop-trading/page-4a1adacd80a049a0.js"
+    ]
+  }
+}

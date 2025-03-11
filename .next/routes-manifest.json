@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/animal-health-raw-materials",
+      "regex": "^/animal\\-health\\-raw\\-materials(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/animal\\-health\\-raw\\-materials(?:/)?$"
+    },
+    {
+      "page": "/appendix",
+      "regex": "^/appendix(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/appendix(?:/)?$"
+    },
+    {
+      "page": "/contact-us",
+      "regex": "^/contact\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact\\-us(?:/)?$"
+    },
+    {
+      "page": "/fertilizer-raw-materials",
+      "regex": "^/fertilizer\\-raw\\-materials(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fertilizer\\-raw\\-materials(?:/)?$"
+    },
+    {
+      "page": "/generic-products",
+      "regex": "^/generic\\-products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/generic\\-products(?:/)?$"
+    },
+    {
+      "page": "/high-performance-chemicals",
+      "regex": "^/high\\-performance\\-chemicals(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/high\\-performance\\-chemicals(?:/)?$"
+    },
+    {
+      "page": "/media-room",
+      "regex": "^/media\\-room(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/media\\-room(?:/)?$"
+    },
+    {
+      "page": "/products-and-services",
+      "regex": "^/products\\-and\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products\\-and\\-services(?:/)?$"
+    },
+    {
+      "page": "/services/agricultural-consulting",
+      "regex": "^/services/agricultural\\-consulting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/agricultural\\-consulting(?:/)?$"
+    },
+    {
+      "page": "/services/crop-trading",
+      "regex": "^/services/crop\\-trading(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/crop\\-trading(?:/)?$"
+    },
+    {
+      "page": "/services/market-intelligence",
+      "regex": "^/services/market\\-intelligence(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/market\\-intelligence(?:/)?$"
+    },
+    {
+      "page": "/services/registration-services",
+      "regex": "^/services/registration\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/registration\\-services(?:/)?$"
+    },
+    {
+      "page": "/services/supply-chain-management",
+      "regex": "^/services/supply\\-chain\\-management(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/supply\\-chain\\-management(?:/)?$"
+    },
+    {
+      "page": "/services/supply-chain-solutions",
+      "regex": "^/services/supply\\-chain\\-solutions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/supply\\-chain\\-solutions(?:/)?$"
+    },
+    {
+      "page": "/specialty-products",
+      "regex": "^/specialty\\-products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/specialty\\-products(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
