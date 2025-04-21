@@ -32,7 +32,7 @@ app.post('/send-email', async (req, res) => {
 
     const mailOptions = {
       from: email, // Sender's email
-      to: 'recipient-email@example.com', // Recipient's email
+      to: 'candy@pacificagriscience.com', // Recipient's email
       subject: subject,
       text: `From: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\n${message}`,
     };
