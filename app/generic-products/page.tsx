@@ -202,8 +202,8 @@ export default function GenericProducts() {
         </p>
         <div className="mt-8">
           <a
-            href="/List of GLP Report - Updated on Jan 5, 2025.pdf"
-            download="List of GLP Report - Updated on Jan 5, 2025.pdf"
+            href="/GLP Report.pdf"
+            download="GLP Report.pdf"
             className="inline-flex items-center justify-center rounded-md border border-transparent bg-green-600 px-5 py-3 text-base font-medium text-white hover:bg-green-700"
           >
             Download GLP Report <Download className="ml-2 h-5 w-5" />

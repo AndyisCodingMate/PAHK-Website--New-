@@ -1,8 +1,8 @@
-// File: /home/andy/PAHK-Website--New-/app/sustainable-products/page.tsx
-import * as entry from '../../../../app/sustainable-products/page.js'
+// File: /home/andy/PAHK-Website--New-/app/contact-us/page.tsx
+import * as entry from '../../../../app/contact-us/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
-type TEntry = typeof import('../../../../app/sustainable-products/page.js')
+type TEntry = typeof import('../../../../app/contact-us/page.js')
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }

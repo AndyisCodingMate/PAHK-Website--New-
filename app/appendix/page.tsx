@@ -33,10 +33,10 @@ export default function Appendix() {
     {
       title: "Good Laboratory Practice (GLP) Report",
       description: "List of GLP Report - Updated on Jan 5, 2025",
-      link: "/List of GLP Report - Updated on Jan 5, 2025.pdf",
+      link: "/GLP Report.pdf",
       icon: <Download className="h-6 w-6 text-green-600 dark:text-green-400" />,
       isExternal: false,
-      filename: "List of GLP Report - Updated on Jan 5, 2025.pdf",
+      filename: "GLP Report.pdf",
     },
     {
       title: "Fertilizer Brochure",
