@@ -1,6 +1,4 @@
 {
-  "/appendix/page": "app/appendix/page.js",
-  "/contact-us/page": "app/contact-us/page.js",
-  "/products-and-services/page": "app/products-and-services/page.js",
-  "/generic-products/page": "app/generic-products/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js"
 }

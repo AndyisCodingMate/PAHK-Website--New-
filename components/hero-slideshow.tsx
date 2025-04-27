@@ -43,7 +43,7 @@ export default function HeroSlideshow() {
                 [
                   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PA%20Cover%20Photo-fKrhJ2i9keps0OdtoR63iqWNjIZ57C.png",
                   "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
-                  "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+                  "/images/globe-in-hands.jpg",
                   "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
                 ][index] || "/placeholder.svg"
               }
