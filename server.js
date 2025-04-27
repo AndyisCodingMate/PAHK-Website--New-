@@ -32,7 +32,7 @@ app.post('/send-email', async (req, res) => {
 
     const mailOptions = {
       from: email, // Sender's email
-      to: 'candy@pacificagriscience.com', // Recipient's email
+      to: 'pahk@biznetvigator.com', // Recipient's email
       subject: subject,
       text: `From: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\n${message}`,
     };
@@ -46,42 +46,6 @@ app.post('/send-email', async (req, res) => {
   }
 });
 
-// Export handler for AWS Lambda
-exports.handler = async (event) => {
-  const body = JSON.parse(event.body);
-
-  try {
-    const transporter = nodemailer.createTransport({
-      host: 'smtp.mailtrap.io',
-      port: 2525,
-      secure: false,
-      auth: {
-        user: process.env.MAILTRAP_USERNAME,
-        pass: process.env.MAILTRAP_PASSWORD,
-      },
-    });
-
-    const mailOptions = {
-      from: body.email,
-      to: 'recipient-email@example.com',
-      subject: body.subject,
-      text: `From: ${body.name}\nEmail: ${body.email}\nPhone: ${body.phone}\nCompany: ${body.company}\n\n${body.message}`,
-    };
-
-    await transporter.sendMail(mailOptions);
-    console.log('Email sent successfully');
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Email sent successfully' }),
-    };
-  } catch (error) {
-    console.error('Error sending email:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: 'Error sending email' }),
-    };
-  }
-};
 
 // Run locally on port 3001 if not in AWS Lambda environment
 if (process.env.NODE_ENV !== 'production') {

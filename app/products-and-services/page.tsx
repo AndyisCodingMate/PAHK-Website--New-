@@ -1,4 +1,4 @@
-'use client';
+"use client"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -55,6 +55,7 @@ export default function ProductsAndServices() {
                       "/high-performance-chemicals",
                       "/animal-health-raw-materials",
                       "/fertilizer-raw-materials",
+                      "/sustainable-products",
                     ][index]
                   }
                   className="flex flex-col overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -68,6 +69,7 @@ export default function ProductsAndServices() {
                           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/F-Raw%20%282%29.jpg-GXxlaUaMk3mHSqxm4CxdiW7Uc5wJ4Y.jpeg",
                           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A-Raw.jpg-djyned93w6Wg9EG7m6U1H8qgRpB3dF.jpeg",
                           "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                          "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
                         ][index] || "/placeholder.svg"
                       }
                       alt={product.title}
@@ -171,4 +173,3 @@ export default function ProductsAndServices() {
     </FadeInSection>
   )
 }
-

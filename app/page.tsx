@@ -1,4 +1,5 @@
-'use client';
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Leaf, Globe, TrendingUp, ShieldCheck } from "lucide-react"
@@ -88,8 +89,8 @@ export default function Home() {
                   title: t("home.productsPreview.items.2.title"),
                   description: t("home.productsPreview.items.2.description"),
                   image:
-                    "https://images.unsplash.com/photo-1590682680695-43b964a3ae17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-                  link: "/services/agricultural-consulting",
+                    "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                  link: "/sustainable-products",
                 },
                 {
                   title: t("home.productsPreview.items.3.title"),
@@ -154,4 +155,3 @@ export default function Home() {
     </FadeInSection>
   )
 }
-

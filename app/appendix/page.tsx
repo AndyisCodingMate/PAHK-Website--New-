@@ -40,11 +40,11 @@ export default function Appendix() {
     },
     {
       title: "Fertilizer Brochure",
-      description: "Fertilizer brochure (Updated May 2020)",
-      link: "/Fertilizer brochure (Updated May 2020).pdf",
+      description: "Fertilizer brochure (Updated 2023)",
+      link: "/PAHK Fertilizer brochure (2023).pdf",
       icon: <Download className="h-6 w-6 text-green-600 dark:text-green-400" />,
       isExternal: false,
-      filename: "Fertilizer brochure (Updated May 2020).pdf",
+      filename: "PAHK Fertilizer brochure (2023).pdf",
     },
     {
       title: "API for Veterinary Use",
@@ -87,12 +87,12 @@ export default function Appendix() {
       filename: "PACIFIC POWER Brochure.pdf",
     },
     {
-      title: "Fertilizer Raw Materials Brochure",
-      description: "Comprehensive guide to our fertilizer raw materials and sourcing philosophy",
-      link: "/Fertilizer Raw Materials Brochure.pdf",
+      title: "Sustainable Products Brochure",
+      description: "PAHK - New Products Portfolio (Sustainable Products) - Updated on Apr 21, 2025",
+      link: "/Sustainable Products Brochure.pdf",
       icon: <Download className="h-6 w-6 text-green-600 dark:text-green-400" />,
       isExternal: false,
-      filename: "Fertilizer Raw Materials Brochure.pdf",
+      filename: "PAHK - Sustainable Products Brochure.pdf",
     },
   ]
 

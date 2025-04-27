@@ -1,3 +1,5 @@
+"use client"
+
 import type { Language } from "@/contexts/LanguageContext"
 import { useLanguage } from "@/contexts/LanguageContext"
 
@@ -285,8 +287,8 @@ export const translations: Translations = {
             description: "Expert assistance in registering agricultural products in various markets.",
           },
           {
-            title: "Agricultural Consulting",
-            description: "Expert advice on agricultural markets, trends, and opportunities.",
+            title: "Sustainable Products",
+            description: "Environmentally responsible agricultural solutions for a greener future.",
           },
           {
             title: "Supply Chain Solutions",
@@ -413,6 +415,10 @@ export const translations: Translations = {
           {
             title: "Fertilizer Raw Materials",
             description: "High-quality raw materials for fertilizer production.",
+          },
+          {
+            title: "Sustainable Products",
+            description: "Environmentally responsible agricultural solutions for a greener future.",
           },
         ],
       },
@@ -598,8 +604,8 @@ export const translations: Translations = {
             description: "在各個市場註冊農產品的專業協助。",
           },
           {
-            title: "農業諮詢",
-            description: "關於農業市場、趨勢和機會的專業建議。",
+            title: "可持續產品",
+            description: "環保負責的農業解決方案，創造更綠色的未來。",
           },
           {
             title: "供應鏈解決方案",
@@ -723,6 +729,10 @@ export const translations: Translations = {
           {
             title: "肥料原料",
             description: "高品質的肥料生產原料。",
+          },
+          {
+            title: "可持續產品",
+            description: "環保負責的農業解決方案，創造更綠色的未來。",
           },
         ],
       },
@@ -905,8 +915,8 @@ export const translations: Translations = {
             description: "在各个市场注册农产品的专业协助。",
           },
           {
-            title: "农业咨询",
-            description: "关于农业市场、趋势和机会的专业建议。",
+            title: "可持续产品",
+            description: "环保负责的农业解决方案，创造更绿色的未来。",
           },
           {
             title: "供应链解决方案",
@@ -1030,6 +1040,10 @@ export const translations: Translations = {
           {
             title: "肥料原料",
             description: "高质量的肥料生产原料。",
+          },
+          {
+            title: "可持续产品",
+            description: "环保负责的农业解决方案，创造更绿色的未来。",
           },
         ],
       },
@@ -1161,4 +1175,3 @@ export function useTranslations() {
     },
   }
 }
-

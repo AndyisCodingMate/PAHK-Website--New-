@@ -43,8 +43,8 @@ export default function FertilizerRawMaterials() {
         </p>
         <div className="mt-8">
           <a
-            href="/Fertilizer Raw Materials Brochure.pdf"
-            download="Fertilizer Raw Materials Brochure.pdf"
+            href="/PAHK Fertilizer brochure (2023).pdf"
+            download="PAHK Fertilizer brochure (2023).pdf"
             className="inline-flex items-center justify-center rounded-md border border-transparent bg-green-600 px-5 py-3 text-base font-medium text-white hover:bg-green-700"
           >
             Download Fertilizer Brochure <Download className="ml-2 h-5 w-5" />
