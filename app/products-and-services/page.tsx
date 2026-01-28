@@ -75,12 +75,12 @@ export default function ProductsAndServices() {
                       <Image
                         src={
                           [
-                            "/images/generic-products-thumb.jpg",
-                            "/images/specialty-products-thumb.jpg",
-                            "/images/design-mode/F-Raw (2).jpg.jpeg",
+                            "/images/generic-products.jpg",
+                            "/images/specialty-products.jpg",
+                            "/images/design-mode/f-raw.jpg",
                             "/images/design-mode/A-Raw.jpg.jpeg",
-                            "/images/fertilizer-thumb.jpg",
-                            "/images/sustainable-thumb.jpg",
+                            "/images/fertilizer-raw.jpg",
+                            "/images/sustainable-products.jpg",
                           ][index] || "/placeholder.svg"
                         }
                         alt={product.title}

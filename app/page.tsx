@@ -93,7 +93,7 @@ export default function Home() {
                 {
                   title: t("home.productsPreview.items.0.title"),
                   description: t("home.productsPreview.items.0.description"),
-                  image: "/images/generic-products-thumb.jpg",
+                  image: "/images/generic-products.jpg",
                   link: "/generic-products",
                 },
                 {
@@ -105,7 +105,7 @@ export default function Home() {
                 {
                   title: t("home.productsPreview.items.2.title"),
                   description: t("home.productsPreview.items.2.description"),
-                  image: "/images/sustainable-thumb.jpg",
+                  image: "/images/sustainable-products.jpg",
                   link: "/sustainable-products",
                 },
                 {
@@ -117,13 +117,13 @@ export default function Home() {
                 {
                   title: t("home.productsPreview.items.4.title"),
                   description: t("home.productsPreview.items.4.description"),
-                  image: "/images/specialty-products-thumb.jpg",
+                  image: "/images/specialty-products.jpg",
                   link: "/specialty-products",
                 },
                 {
                   title: t("home.productsPreview.items.5.title"),
                   description: t("home.productsPreview.items.5.description"),
-                  image: "/images/fertilizer-thumb.jpg",
+                  image: "/images/fertilizer-raw.jpg",
                   link: "/fertilizer-raw-materials",
                 },
               ].map((item: any, index: number) => (

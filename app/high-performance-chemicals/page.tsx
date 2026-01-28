@@ -18,7 +18,7 @@ export default function HighPerformanceChemicals() {
       <div className="relative bg-green-800 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="/images/design-mode/F-Raw (2).jpg.jpeg"
+            src="/images/design-mode/f-raw.jpg"
             alt="High Performance Chemicals"
             fill
             className="object-cover opacity-30"

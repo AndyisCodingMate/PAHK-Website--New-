@@ -169,7 +169,7 @@ export default function ContactUs() {
                     </span>
                   </div>
                   <Image
-                    src="/images/design-mode/candy whatsapp QR.png"
+                    src="/images/design-mode/candy-whatsapp-QR.png"
                     alt="WhatsApp QR Code"
                     width={150}
                     height={150}
@@ -195,7 +195,7 @@ export default function ContactUs() {
                     </span>
                   </div>
                   <Image
-                    src="/images/design-mode/candy wechat QR.png"
+                    src="/images/design-mode/candy-wechat-QR.png"
                     alt="WeChat QR Code"
                     width={150}
                     height={150}

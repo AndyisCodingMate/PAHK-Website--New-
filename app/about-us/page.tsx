@@ -116,7 +116,7 @@ export default function AboutUs() {
             </div>
             <div className="mt-12">
               <Image
-                src="/images/design-mode/Super Map.png"
+                src="/images/super-map.jpg"
                 alt="Pacific Agriscience Global Network Map"
                 width={1920}
                 height={1080}

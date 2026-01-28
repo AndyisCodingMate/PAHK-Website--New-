@@ -1,31 +1,31 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useCallback } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
-import { useTranslations } from "@/translations"
+import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslations } from "@/translations";
 
 export default function HeroSlideshow() {
-  const { t } = useTranslations()
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const { t } = useTranslations();
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = t("home.hero.slides")
+  const slides = t("home.hero.slides");
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
-  }, [slides.length])
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  }, [slides.length]);
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
-  }
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide()
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [nextSlide])
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
 
   return (
     <section className="relative bg-gradient-to-r from-green-800 to-green-600 text-white">
@@ -41,7 +41,7 @@ export default function HeroSlideshow() {
             <Image
               src={
                 [
-                  "/images/pa-cover-photo.jpg",
+                  "/images/about-hero.jpg",
                   "/images/agricultural-field.jpg",
                   "/images/globe-in-hands.jpg",
                   "/images/sustainable-agriculture.jpg",
@@ -55,11 +55,20 @@ export default function HeroSlideshow() {
             <div className="relative z-20 flex h-full items-center">
               <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
                 <div className="md:w-2/3">
-                  <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">{slide.title}</h1>
+                  <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                    {slide.title}
+                  </h1>
                   <p className="mt-6 max-w-xl text-lg">{slide.description}</p>
                   <div className="mt-10 flex items-center gap-x-6">
                     <Link
-                      href={["/products-and-services", "/about-us", "/products-and-services", "/about-us"][index]}
+                      href={
+                        [
+                          "/products-and-services",
+                          "/about-us",
+                          "/products-and-services",
+                          "/about-us",
+                        ][index]
+                      }
                       className="rounded-md bg-white px-5 py-3 text-base font-semibold text-green-700 shadow-sm hover:bg-gray-100 transition-colors"
                     >
                       {slide.buttonText}
@@ -68,7 +77,8 @@ export default function HeroSlideshow() {
                       href="/contact-us"
                       className="flex items-center text-base font-semibold hover:text-green-200 transition-colors"
                     >
-                      {t("common.contactUs")} <ArrowRight className="ml-2 h-4 w-4" />
+                      {t("common.contactUs")}{" "}
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
                 </div>
@@ -108,5 +118,5 @@ export default function HeroSlideshow() {
         </div>
       </div>
     </section>
-  )
+  );
 }
