@@ -41,10 +41,10 @@ export default function HeroSlideshow() {
             <Image
               src={
                 [
-                  "/images/pa-20cover-20photo.png",
-                  "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+                  "/images/pa-cover-photo.jpg",
+                  "/images/agricultural-field.jpg",
                   "/images/globe-in-hands.jpg",
-                  "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80",
+                  "/images/sustainable-agriculture.jpg",
                 ][index] || "/placeholder.svg"
               }
               alt={slide.title}
