@@ -1,4 +1,21 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js"
+  "/about-us/page": "app/about-us/page.js",
+  "/animal-health-raw-materials/page": "app/animal-health-raw-materials/page.js",
+  "/appendix/page": "app/appendix/page.js",
+  "/contact-us/page": "app/contact-us/page.js",
+  "/fertilizer-raw-materials/page": "app/fertilizer-raw-materials/page.js",
+  "/high-performance-chemicals/page": "app/high-performance-chemicals/page.js",
+  "/generic-products/page": "app/generic-products/page.js",
+  "/page": "app/page.js",
+  "/products-and-services/page": "app/products-and-services/page.js",
+  "/media-room/page": "app/media-room/page.js",
+  "/services/agricultural-consulting/page": "app/services/agricultural-consulting/page.js",
+  "/services/crop-trading/page": "app/services/crop-trading/page.js",
+  "/services/market-intelligence/page": "app/services/market-intelligence/page.js",
+  "/services/registration-services/page": "app/services/registration-services/page.js",
+  "/services/supply-chain-management/page": "app/services/supply-chain-management/page.js",
+  "/services/supply-chain-solutions/page": "app/services/supply-chain-solutions/page.js",
+  "/specialty-products/page": "app/specialty-products/page.js",
+  "/sustainable-products/page": "app/sustainable-products/page.js"
 }

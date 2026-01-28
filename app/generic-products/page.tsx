@@ -1,15 +1,14 @@
-'use client';
+"use client";
 
-
-import { useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Download } from "lucide-react"
+import { useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Download } from "lucide-react";
 
 export default function GenericProducts() {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   const genericProducts = [
     "Butroxydim",
@@ -143,7 +142,7 @@ export default function GenericProducts() {
     "Triallate",
     "Triasulfuron",
     "Tribenuron-methyl",
-  ]
+  ];
 
   return (
     <div className="bg-page">
@@ -158,23 +157,31 @@ export default function GenericProducts() {
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">Generic Products</h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            Generic Products
+          </h1>
           <p className="mt-6 max-w-xl text-xl">
-            A wide range of high-quality generic pesticide products for various agricultural needs.
+            A wide range of high-quality generic pesticide products for various
+            agricultural needs.
           </p>
         </div>
       </div>
 
       {/* Product List */}
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-green-800 dark:text-green-300">Our Generic Products</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-green-800 dark:text-green-300">
+          Our Generic Products
+        </h2>
         <p className="mt-4 text-lg text-page">
-          We offer a comprehensive list of generic pesticide products. Below is our current selection of available
-          products:
+          We offer a comprehensive list of generic pesticide products. Below is
+          our current selection of available products:
         </p>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {genericProducts.map((product, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+          {genericProducts.map((product: any, index: number) => (
+            <div
+              key={index}
+              className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg"
+            >
               <p className="text-gray-900 dark:text-gray-100">{product}</p>
             </div>
           ))}
@@ -196,9 +203,11 @@ export default function GenericProducts() {
           Good Laboratory Practice (GLP) Report
         </h2>
         <p className="mt-4 text-lg text-page">
-          Good laboratory practice (GLP) is a set of principles intended to assure the quality and integrity of
-          non-clinical laboratory studies that are intended to support research or marketing permits for products
-          regulated by government agencies. Download our GLP report below to learn more about our generic products.
+          Good laboratory practice (GLP) is a set of principles intended to
+          assure the quality and integrity of non-clinical laboratory studies
+          that are intended to support research or marketing permits for
+          products regulated by government agencies. Download our GLP report
+          below to learn more about our generic products.
         </p>
         <div className="mt-8">
           <a
@@ -235,6 +244,5 @@ export default function GenericProducts() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

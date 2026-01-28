@@ -37,7 +37,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Pacific Agriscience Hong Kong Company Limited</span>
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PAHK-ramUWkZ2TRivzoC4joztte37X4bMhw.png"
+              src="/images/design-mode/PAHK.png"
               alt="Pacific Agriscience Logo"
               width={180}
               height={60}
@@ -80,7 +80,7 @@ export default function Header() {
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Pacific Agriscience Hong Kong Company Limited</span>
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PAHK-ramUWkZ2TRivzoC4joztte37X4bMhw.png"
+                  src="/images/design-mode/PAHK.png"
                   alt="Pacific Agriscience Logo"
                   width={120}
                   height={40}

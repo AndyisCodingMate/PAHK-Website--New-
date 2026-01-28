@@ -1,1 +1,1 @@
-self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"process.env.NEXT_SERVER_ACTIONS_ENCRYPTION_KEY\"\n}"
+self.__RSC_SERVER_MANIFEST="{\"node\":{\"401d912719322e9619015022d3226eda98d23aaf17\":{\"workers\":{\"app/contact-us/page\":{\"moduleId\":\"50552\",\"async\":false}},\"layer\":{\"app/contact-us/page\":\"action-browser\"},\"filename\":\"app/actions/send-email.tsx\",\"exportedName\":\"sendContactEmail\"}},\"edge\":{},\"encryptionKey\":\"process.env.NEXT_SERVER_ACTIONS_ENCRYPTION_KEY\"}"

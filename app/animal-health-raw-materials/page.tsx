@@ -16,7 +16,7 @@ export default function AnimalHealthRawMaterials() {
       <div className="relative bg-green-800 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A-Raw.jpg-djyned93w6Wg9EG7m6U1H8qgRpB3dF.jpeg"
+            src="/images/design-mode/A-Raw.jpg.jpeg"
             alt="Animal Health Raw Materials"
             fill
             className="object-cover opacity-30"
@@ -101,4 +101,3 @@ export default function AnimalHealthRawMaterials() {
     </div>
   )
 }
-

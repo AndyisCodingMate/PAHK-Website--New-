@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { MapPin, Phone, Mail } from "lucide-react"
@@ -12,7 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PAHK-ramUWkZ2TRivzoC4joztte37X4bMhw.png"
+              src="/images/design-mode/PAHK.png"
               alt="Pacific Agriscience Logo"
               width={160}
               height={50}
@@ -74,4 +76,3 @@ export default function Footer() {
     </footer>
   )
 }
-

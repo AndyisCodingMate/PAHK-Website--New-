@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import type { Language } from "@/contexts/LanguageContext"
-import { useLanguage } from "@/contexts/LanguageContext"
+import type { Language } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type TranslationKey =
   | "navigation"
@@ -12,208 +12,210 @@ type TranslationKey =
   | "footer"
   | "common"
   | "mediaRoom"
-  | "appendix"
+  | "appendix";
 
 type NavigationTranslation = {
-  home: string
-  aboutUs: string
-  productsAndServices: string
-  contactUs: string
-  mediaRoom: string
-  appendix: string
-}
+  home: string;
+  aboutUs: string;
+  productsAndServices: string;
+  contactUs: string;
+  mediaRoom: string;
+  appendix: string;
+};
 
 type HomeTranslation = {
   hero: {
     slides: Array<{
-      title: string
-      description: string
-      buttonText: string
-    }>
-  }
+      title: string;
+      description: string;
+      buttonText: string;
+    }>;
+  };
   features: {
-    title: string
-    subtitle: string
+    title: string;
+    subtitle: string;
     items: Array<{
-      title: string
-      description: string
-    }>
-  }
+      title: string;
+      description: string;
+    }>;
+  };
   productsPreview: {
-    title: string
-    subtitle: string
-    viewAll: string
+    title: string;
+    subtitle: string;
+    viewAll: string;
     items: Array<{
-      title: string
-      description: string
-    }>
-  }
-}
+      title: string;
+      description: string;
+    }>;
+  };
+};
 
 type AboutTranslation = {
   hero: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   company: {
-    title: string
-    content: string[]
-  }
+    title: string;
+    content: string[];
+  };
   journey: {
-    title: string
-    subtitle: string
+    title: string;
+    subtitle: string;
     milestones: Array<{
-      year: number
-      event: string
-    }>
-  }
+      year: number;
+      event: string;
+    }>;
+  };
   sourcing: {
-    title: string
-    subtitle: string
-    content: string[]
-    list: string[]
-    conclusion: string[]
-  }
+    title: string;
+    subtitle: string;
+    content: string[];
+    list: string[];
+    conclusion: string[];
+  };
   network: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   values: {
-    title: string
-    subtitle: string
+    title: string;
+    subtitle: string;
     items: Array<{
-      title: string
-      description: string
-    }>
-  }
-}
+      title: string;
+      description: string;
+    }>;
+  };
+};
 
 type ProductsTranslation = {
   hero: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   overview: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   products: {
-    title: string
-    subtitle: string
+    title: string;
+    subtitle: string;
     items: Array<{
-      title: string
-      description: string
-    }>
-  }
+      title: string;
+      description: string;
+    }>;
+  };
   services: {
-    title: string
-    subtitle: string
+    title: string;
+    subtitle: string;
     items: Array<{
-      title: string
-      description: string
-    }>
-  }
+      title: string;
+      description: string;
+    }>;
+  };
   cta: {
-    title: string
-    subtitle: string
-    button: string
-  }
-}
+    title: string;
+    subtitle: string;
+    button: string;
+  };
+};
 
 type ContactTranslation = {
   hero: {
-    title: string
-    subtitle: string
-  }
+    title: string;
+    subtitle: string;
+  };
   getInTouch: {
-    title: string
-    subtitle: string
+    title: string;
+    subtitle: string;
     address: {
-      label: string
-    }
+      label: string;
+    };
     phone: {
-      label: string
-    }
+      label: string;
+    };
     hours: {
-      label: string
-      value: string
-    }
-  }
+      label: string;
+      value: string;
+    };
+  };
   team: {
-    title: string
+    title: string;
     members: Array<{
-      name: string
-      details: string[]
-    }>
-  }
+      name: string;
+      details: string[];
+    }>;
+  };
   connect: {
-    title: string
-    whatsapp: string
-    wechat: string
-    wechatId: string
-  }
+    title: string;
+    whatsapp: string;
+    wechat: string;
+    wechatId: string;
+  };
   form: {
-    title: string
-    name: string
-    email: string
-    phone: string
-    company: string
-    subject: string
-    message: string
-    submit: string
-    success: string
-  }
-}
+    title: string;
+    name: string;
+    email: string;
+    phone: string;
+    company: string;
+    subject: string;
+    message: string;
+    submit: string;
+    success: string;
+    error: string;
+    sending: string;
+  };
+};
 
 type FooterTranslation = {
-  description: string
-  contact: string
-  quickLinks: string
-  copyright: string
-}
+  description: string;
+  contact: string;
+  quickLinks: string;
+  copyright: string;
+};
 
 type CommonTranslation = {
-  learnMore: string
-  contactUs: string
-  readyToDiscuss: string
-  ourTeamHelp: string
-  pageUnderConstruction: string
-  interestedInOurProducts: string
-  getInTouch: string
-  comingSoon: string
-  stayTuned: string
-  visitWebsite: string
-  downloadPDF: string
-}
+  learnMore: string;
+  contactUs: string;
+  readyToDiscuss: string;
+  ourTeamHelp: string;
+  pageUnderConstruction: string;
+  interestedInOurProducts: string;
+  getInTouch: string;
+  comingSoon: string;
+  stayTuned: string;
+  visitWebsite: string;
+  downloadPDF: string;
+};
 
 type MediaRoomTranslation = {
-  subtitle: string
-  comingSoonMessage: string
-}
+  subtitle: string;
+  comingSoonMessage: string;
+};
 
 type AppendixTranslation = {
-  subtitle: string
-  documentsAndResources: string
-  documentsDescription: string
+  subtitle: string;
+  documentsAndResources: string;
+  documentsDescription: string;
   documents: Array<{
-    title: string
-    description: string
-  }>
-}
+    title: string;
+    description: string;
+  }>;
+};
 
 type Translations = {
   [key in Language]: {
-    navigation: NavigationTranslation
-    home: HomeTranslation
-    about: AboutTranslation
-    products: ProductsTranslation
-    contact: ContactTranslation
-    footer: FooterTranslation
-    common: CommonTranslation
-    mediaRoom?: MediaRoomTranslation
-    appendix?: AppendixTranslation
-  }
-}
+    navigation: NavigationTranslation;
+    home: HomeTranslation;
+    about: AboutTranslation;
+    products: ProductsTranslation;
+    contact: ContactTranslation;
+    footer: FooterTranslation;
+    common: CommonTranslation;
+    mediaRoom?: MediaRoomTranslation;
+    appendix?: AppendixTranslation;
+  };
+};
 
 export const translations: Translations = {
   en: {
@@ -230,22 +232,26 @@ export const translations: Translations = {
         slides: [
           {
             title: "Innovative Agricultural Solutions",
-            description: "Connecting producers with global markets through innovative trading solutions.",
+            description:
+              "Connecting producers with global markets through innovative trading solutions.",
             buttonText: "Our Services",
           },
           {
             title: "Sustainable Practices",
-            description: "Promoting environmentally responsible agricultural trading across the Asia-Pacific region.",
+            description:
+              "Promoting environmentally responsible agricultural trading across the Asia-Pacific region.",
             buttonText: "Learn More",
           },
           {
             title: "Global Network",
-            description: "Our extensive network connects agricultural producers with markets worldwide.",
+            description:
+              "Our extensive network connects agricultural producers with markets worldwide.",
             buttonText: "Our Products",
           },
           {
             title: "Quality Assurance",
-            description: "Ensuring the highest standards in agricultural products and services.",
+            description:
+              "Ensuring the highest standards in agricultural products and services.",
             buttonText: "Our Commitment",
           },
         ],
@@ -257,50 +263,61 @@ export const translations: Translations = {
         items: [
           {
             title: "Sustainable Practices",
-            description: "We prioritize environmentally responsible agricultural trading solutions.",
+            description:
+              "We prioritize environmentally responsible agricultural trading solutions.",
           },
           {
             title: "Global Network",
-            description: "Our extensive network connects producers with markets worldwide.",
+            description:
+              "Our extensive network connects producers with markets worldwide.",
           },
           {
             title: "Market Expertise",
-            description: "Deep industry knowledge to navigate complex agricultural markets.",
+            description:
+              "Deep industry knowledge to navigate complex agricultural markets.",
           },
           {
             title: "Quality Assurance",
-            description: "Rigorous standards ensure the highest quality agricultural products.",
+            description:
+              "Rigorous standards ensure the highest quality agricultural products.",
           },
         ],
       },
       productsPreview: {
         title: "Our Products & Services",
-        subtitle: "Discover our comprehensive range of agricultural trading solutions.",
+        subtitle:
+          "Discover our comprehensive range of agricultural trading solutions.",
         viewAll: "View All Products & Services",
         items: [
           {
             title: "Generic Products",
-            description: "A wide range of high-quality generic pesticide products for various agricultural needs.",
+            description:
+              "A wide range of high-quality generic pesticide products for various agricultural needs.",
           },
           {
             title: "Registration Services",
-            description: "Expert assistance in registering agricultural products in various markets.",
+            description:
+              "Expert assistance in registering agricultural products in various markets.",
           },
           {
             title: "Sustainable Products",
-            description: "Environmentally responsible agricultural solutions for a greener future.",
+            description:
+              "Environmentally responsible agricultural solutions for a greener future.",
           },
           {
             title: "Supply Chain Solutions",
-            description: "Optimizing agricultural supply chains for efficiency and sustainability.",
+            description:
+              "Optimizing agricultural supply chains for efficiency and sustainability.",
           },
           {
             title: "Specialty Products",
-            description: "Unique products registered and marketed through local networks of dealers.",
+            description:
+              "Unique products registered and marketed through local networks of dealers.",
           },
           {
             title: "Fertilizer Raw Materials",
-            description: "High-quality raw materials for fertilizer production.",
+            description:
+              "High-quality raw materials for fertilizer production.",
           },
         ],
       },
@@ -319,7 +336,8 @@ export const translations: Translations = {
       },
       journey: {
         title: "Our Journey",
-        subtitle: "Key moments in the growth and expansion of Pacific Agriscience",
+        subtitle:
+          "Key moments in the growth and expansion of Pacific Agriscience",
         milestones: [
           {
             year: 1998,
@@ -338,7 +356,8 @@ export const translations: Translations = {
       },
       sourcing: {
         title: "Our Sourcing Excellence",
-        subtitle: "Transforming sourcing challenges into opportunities for our clients.",
+        subtitle:
+          "Transforming sourcing challenges into opportunities for our clients.",
         content: [
           "At Pacific Agriscience, we specialize in sourcing and supplying generic pesticides, specialty agrochemicals, and high-performance chemicals. Our comprehensive approach includes:",
         ],
@@ -356,27 +375,33 @@ export const translations: Translations = {
       },
       network: {
         title: "Global Network Relation Atlas",
-        subtitle: "Our extensive network spans across continents, enabling us to serve clients worldwide.",
+        subtitle:
+          "Our extensive network spans across continents, enabling us to serve clients worldwide.",
       },
       values: {
         title: "Our Values",
-        subtitle: "These core principles guide our business operations and relationships.",
+        subtitle:
+          "These core principles guide our business operations and relationships.",
         items: [
           {
             title: "Caring",
-            description: "We prioritize the needs of our clients and the agricultural community.",
+            description:
+              "We prioritize the needs of our clients and the agricultural community.",
           },
           {
             title: "Sharing",
-            description: "We believe in sharing knowledge and resources to promote mutual growth.",
+            description:
+              "We believe in sharing knowledge and resources to promote mutual growth.",
           },
           {
             title: "Excellence",
-            description: "We strive for excellence in all aspects of our service delivery.",
+            description:
+              "We strive for excellence in all aspects of our service delivery.",
           },
           {
             title: "Innovation",
-            description: "We continuously seek innovative solutions to meet evolving market needs.",
+            description:
+              "We continuously seek innovative solutions to meet evolving market needs.",
           },
         ],
       },
@@ -384,7 +409,8 @@ export const translations: Translations = {
     products: {
       hero: {
         title: "Products & Services",
-        subtitle: "Comprehensive agricultural trading solutions tailored to your needs.",
+        subtitle:
+          "Comprehensive agricultural trading solutions tailored to your needs.",
       },
       overview: {
         title: "Our Comprehensive Solutions",
@@ -398,45 +424,55 @@ export const translations: Translations = {
         items: [
           {
             title: "Generic Products",
-            description: "A wide range of generic pesticide products for various agricultural needs.",
+            description:
+              "A wide range of generic pesticide products for various agricultural needs.",
           },
           {
             title: "Specialty Products",
-            description: "Unique products registered and marketed through local networks of dealers.",
+            description:
+              "Unique products registered and marketed through local networks of dealers.",
           },
           {
             title: "High Performance Chemicals",
-            description: "Advanced chemical solutions for optimal agricultural performance.",
+            description:
+              "Advanced chemical solutions for optimal agricultural performance.",
           },
           {
             title: "Animal Health Raw Materials",
-            description: "Raw materials for medicine used in the veterinary industry.",
+            description:
+              "Raw materials for medicine used in the veterinary industry.",
           },
           {
             title: "Fertilizer Raw Materials",
-            description: "High-quality raw materials for fertilizer production.",
+            description:
+              "High-quality raw materials for fertilizer production.",
           },
           {
             title: "Sustainable Products",
-            description: "Environmentally responsible agricultural solutions for a greener future.",
+            description:
+              "Environmentally responsible agricultural solutions for a greener future.",
           },
         ],
       },
       services: {
         title: "Our Services",
-        subtitle: "We provide comprehensive services to support agricultural businesses throughout the supply chain.",
+        subtitle:
+          "We provide comprehensive services to support agricultural businesses throughout the supply chain.",
         items: [
           {
             title: "Registration Services",
-            description: "Expert assistance in registering agricultural products in various markets.",
+            description:
+              "Expert assistance in registering agricultural products in various markets.",
           },
           {
             title: "Market Intelligence",
-            description: "Insights and analysis on agricultural market trends and opportunities.",
+            description:
+              "Insights and analysis on agricultural market trends and opportunities.",
           },
           {
             title: "Supply Chain Management",
-            description: "End-to-end supply chain solutions for agricultural products.",
+            description:
+              "End-to-end supply chain solutions for agricultural products.",
           },
         ],
       },
@@ -449,7 +485,8 @@ export const translations: Translations = {
     contact: {
       hero: {
         title: "Contact Us",
-        subtitle: "Get in touch with our team to discuss how we can support your agricultural business.",
+        subtitle:
+          "Get in touch with our team to discuss how we can support your agricultural business.",
       },
       getInTouch: {
         title: "Get in Touch",
@@ -479,7 +516,10 @@ export const translations: Translations = {
           },
           {
             name: "Stanley Poon, Administration and Logistics",
-            details: ["Phone (Hong Kong): (+852) 6303 3499", "Email: pahksp@biznetvigator.com"],
+            details: [
+              "Phone (Hong Kong): (+852) 6303 3499",
+              "Email: pahksp@biznetvigator.com",
+            ],
           },
         ],
       },
@@ -499,6 +539,9 @@ export const translations: Translations = {
         message: "Message",
         submit: "Send Message",
         success: "Thank you for your message. We will get back to you soon!",
+        error:
+          "Sorry, there was an error sending your message. Please try again or contact us directly.",
+        sending: "Sending...",
       },
     },
     footer: {
@@ -506,7 +549,8 @@ export const translations: Translations = {
         "Pacific Agriscience (Hong Kong) Company Limited provides innovative agricultural chemical solutions across the globe.",
       contact: "Contact",
       quickLinks: "Quick Links",
-      copyright: "© {year} Pacific Agriscience (Hong Kong) Company Limited. All rights reserved.",
+      copyright:
+        "© {year} Pacific Agriscience (Hong Kong) Company Limited. All rights reserved.",
     },
     common: {
       learnMore: "Learn More",
@@ -515,7 +559,8 @@ export const translations: Translations = {
       ourTeamHelp: "Our team is here to help you find the right solutions.",
       pageUnderConstruction:
         "This page is under construction. We're working on bringing you detailed information. Please check back soon or contact us for more information.",
-      interestedInOurProducts: "Interested in our high performance chemical solutions?",
+      interestedInOurProducts:
+        "Interested in our high performance chemical solutions?",
       getInTouch: "Get in Touch",
       comingSoon: "Coming Soon",
       stayTuned: "Stay tuned!",
@@ -523,14 +568,17 @@ export const translations: Translations = {
       downloadPDF: "Download PDF",
     },
     mediaRoom: {
-      subtitle: "Stay updated with the latest news, events, and insights from Pacific Agriscience.",
+      subtitle:
+        "Stay updated with the latest news, events, and insights from Pacific Agriscience.",
       comingSoonMessage:
         "We're currently working on bringing you the latest news, resources, and upcoming events. Check back soon for updates on Pacific Agriscience's activities and industry insights.",
     },
     appendix: {
-      subtitle: "Additional resources, references, and supplementary information.",
+      subtitle:
+        "Additional resources, references, and supplementary information.",
       documentsAndResources: "Documents & Resources",
-      documentsDescription: "Access important documents and resources related to our operations and industry.",
+      documentsDescription:
+        "Access important documents and resources related to our operations and industry.",
       documents: [],
     },
   },
@@ -569,7 +617,7 @@ export const translations: Translations = {
         ],
       },
       features: {
-        title: "為何選擇太平洋農業有限公司",
+        title: "為何選擇太平洋科農有限公司",
         subtitle: "我們提供全面的農業貿易解決方案，專注於可持續性和創新。",
         items: [
           {
@@ -630,25 +678,25 @@ export const translations: Translations = {
       company: {
         title: "我們的公司",
         content: [
-          "太平洋農業有限公司（香港）致力於為農民和農業化學品供應鏈提供具成本效益的通用農藥和創新的特種農業化學品。我們在新加坡和澳洲設有聯營公司，我們緊密的全球合作網絡覆蓋全球超過50個城市。",
+          "太平洋科農有限公司（香港）致力於為農民和農業化學品供應鏈提供具成本效益的通用農藥和創新的特種農業化學品。我們在新加坡和澳洲設有聯營公司，我們緊密的全球合作網絡覆蓋全球超過50個城市。",
           "我們精通於銷售通用農藥、肥料原料、特種農業化學品和工業特種化學品。我們的團隊還為一系列專有農業化學品開發市場，並尋找這些產品的全國分銷商。",
         ],
       },
       journey: {
         title: "我們的歷程",
-        subtitle: "太平洋農業有限公司成長和擴展的關鍵時刻",
+        subtitle: "太平洋科農有限公司成長和擴展的關鍵時刻",
         milestones: [
           {
             year: 1998,
-            event: "太平洋農業有限公司私人有限公司在新加坡成立",
+            event: "太平洋科農有限公司私人有限公司在新加坡成立",
           },
           {
             year: 2001,
-            event: "太平洋農業有限公司有限公司在澳洲成立",
+            event: "太平洋科農有限公司有限公司在澳洲成立",
           },
           {
             year: 2019,
-            event: "太平洋農業有限公司（香港）有限公司成立，負責公司的貿易業務",
+            event: "太平洋科農有限公司成立，負責公司的貿易業務",
           },
         ],
       },
@@ -656,7 +704,7 @@ export const translations: Translations = {
         title: "我們的採購卓越",
         subtitle: "將採購挑戰轉化為客戶的機會。",
         content: [
-          "在太平洋農業有限公司，我們專注於採購和供應通用農藥、特種農業化學品和高性能化學品。我們的全面方法包括：",
+          "在太平洋科農有限公司，我們專注於採購和供應通用農藥、特種農業化學品和高性能化學品。我們的全面方法包括：",
         ],
         list: [
           "監控產品可用性和市場趨勢",
@@ -704,11 +752,13 @@ export const translations: Translations = {
       },
       overview: {
         title: "我們的全面解決方案",
-        subtitle: "太平洋農業有限公司提供廣泛的產品和服務，旨在滿足農業企業的多樣化需求。",
+        subtitle:
+          "太平洋科農有限公司提供廣泛的產品和服務，旨在滿足農業企業的多樣化需求。",
       },
       products: {
         title: "我們的產品",
-        subtitle: "我們提供各種農業化學產品，利用我們的全球網絡和多年經驗，為您帶來最新和最優質的產品。",
+        subtitle:
+          "我們提供各種農業化學產品，利用我們的全球網絡和多年經驗，為您帶來最新和最優質的產品。",
         items: [
           {
             title: "通用產品",
@@ -767,7 +817,8 @@ export const translations: Translations = {
       },
       getInTouch: {
         title: "與我們聯繫",
-        subtitle: "我們的團隊準備回答您的問題，並討論我們的產品和服務如何滿足您的需求。",
+        subtitle:
+          "我們的團隊準備回答您的問題，並討論我們的產品和服務如何滿足您的需求。",
         address: {
           label: "地址",
         },
@@ -792,7 +843,10 @@ export const translations: Translations = {
           },
           {
             name: "潘先生，行政和物流",
-            details: ["電話（香港）：(+852) 6303 3499", "電子郵件：pahksp@biznetvigator.com"],
+            details: [
+              "電話（香港）：(+852) 6303 3499",
+              "電子郵件：pahksp@biznetvigator.com",
+            ],
           },
         ],
       },
@@ -812,20 +866,23 @@ export const translations: Translations = {
         message: "訊息",
         submit: "發送訊息",
         success: "感謝您的訊息。我們將盡快回覆您！",
+        error: "抱歉，發送訊息時出現錯誤。請重試或直接聯繫我們。",
+        sending: "發送中...",
       },
     },
     footer: {
-      description: "太平洋農業有限公司（香港）有限公司在全球提供創新的農業化學解決方案。",
+      description: "太平洋科農有限公司在全球提供創新的農業化學解決方案。",
       contact: "聯絡",
       quickLinks: "快速連結",
-      copyright: "© {year} 太平洋農業有限公司（香港）有限公司。版權所有。",
+      copyright: "© {year} 太平洋科農有限公司。版權所有。",
     },
     common: {
       learnMore: "了解更多",
       contactUs: "聯絡我們",
       readyToDiscuss: "準備好討論您的具體需求？",
       ourTeamHelp: "我們的團隊在此幫助您找到合適的解決方案。",
-      pageUnderConstruction: "此頁面正在建設中。我們正在努力為您提供詳細信息。請稍後再查看或聯繫我們以獲取更多信息。",
+      pageUnderConstruction:
+        "此頁面正在建設中。我們正在努力為您提供詳細信息。請稍後再查看或聯繫我們以獲取更多信息。",
       interestedInOurProducts: "對我們的高性能化學解決方案感興趣嗎？",
       getInTouch: "聯繫我們",
       comingSoon: "即將推出",
@@ -834,9 +891,9 @@ export const translations: Translations = {
       downloadPDF: "下載PDF",
     },
     mediaRoom: {
-      subtitle: "了解太平洋農業有限公司的最新新聞、活動和見解。",
+      subtitle: "了解太平洋科農有限公司的最新新聞、活動和見解。",
       comingSoonMessage:
-        "我們正在努力為您帶來最新的新聞、資源和即將舉行的活動。請稍後再來查看太平洋農業有限公司的活動和行業洞察更新。",
+        "我們正在努力為您帶來最新的新聞、資源和即將舉行的活動。請稍後再來查看太平洋科農有限公司的活動和行業洞察更新。",
     },
     appendix: {
       subtitle: "額外資源、參考資料和補充信息。",
@@ -880,7 +937,7 @@ export const translations: Translations = {
         ],
       },
       features: {
-        title: "为何选择太平洋农业有限公司",
+        title: "为何选择太平洋科农有限公司",
         subtitle: "我们提供全面的农业贸易解决方案，专注于可持续性和创新。",
         items: [
           {
@@ -941,25 +998,25 @@ export const translations: Translations = {
       company: {
         title: "我们的公司",
         content: [
-          "太平洋农业有限公司（香港）致力于为农民和农业化学品供应链提供具成本效益的通用农药和创新的特种农业化学品。我们在新加坡和澳洲设有联营公司，我们紧密的全球合作网络覆盖全球超过50个城市。",
+          "太平洋科农有限公司（香港）致力于为农民和农业化学品供应链提供具成本效益的通用农药和创新的特种农业化学品。我们在新加坡和澳洲设有联营公司，我们紧密的全球合作网络覆盖全球超过50个城市。",
           "我们精通于销售通用农药、肥料原料、特种农业化学品和工业特种化学品。我们的团队还为一系列专有农业化化学品开发市场，并寻找这些产品的全国分销商。",
         ],
       },
       journey: {
         title: "我们的历程",
-        subtitle: "太平洋农业有限公司成长和扩展的关键时刻",
+        subtitle: "太平洋科农有限公司成长和扩展的关键时刻",
         milestones: [
           {
             year: 1998,
-            event: "太平洋农业有限公司私人有限公司在新加坡成立",
+            event: "太平洋科农有限公司私人有限公司在新加坡成立",
           },
           {
             year: 2001,
-            event: "太平洋农业有限公司有限公司在澳洲成立",
+            event: "太平洋科农有限公司有限公司在澳洲成立",
           },
           {
             year: 2019,
-            event: "太平洋农业有限公司（香港）有限公司成立，负责公司的贸易业务",
+            event: "太平洋科农有限公司成立，负责公司的贸易业务",
           },
         ],
       },
@@ -967,7 +1024,7 @@ export const translations: Translations = {
         title: "我们的采购卓越",
         subtitle: "将采购挑战转化为客户的机会。",
         content: [
-          "在太平洋农业有限公司，我们专注于采购和供应通用农药、特种农业化学品和高性能化化学品。我们的全面方法包括：",
+          "在太平洋科农有限公司，我们专注于采购和供应通用农药、特种农业化学品和高性能化化学品。我们的全面方法包括：",
         ],
         list: [
           "监控产品可用性和市场趋势",
@@ -1015,11 +1072,13 @@ export const translations: Translations = {
       },
       overview: {
         title: "我们的全面解决方案",
-        subtitle: "太平洋农业有限公司提供广泛的产品和服务，旨在满足农业企业的多样化需求。",
+        subtitle:
+          "太平洋科农有限公司提供广泛的产品和服务，旨在满足农业企业的多样化需求。",
       },
       products: {
         title: "我们的产品",
-        subtitle: "我们提供各种农业化学产品，利用我们的全球网络和多年经验，为您带来最新和最优质的产品。",
+        subtitle:
+          "我们提供各种农业化学产品，利用我们的全球网络和多年经验，为您带来最新和最优质的产品。",
         items: [
           {
             title: "通用产品",
@@ -1078,7 +1137,8 @@ export const translations: Translations = {
       },
       getInTouch: {
         title: "与我们联系",
-        subtitle: "我们的团队准备回答您的问题，并讨论我们的产品和服务如何满足您的需求。",
+        subtitle:
+          "我们的团队准备回答您的问题，并讨论我们的产品和服务如何满足您的需求。",
         address: {
           label: "地址",
         },
@@ -1103,7 +1163,10 @@ export const translations: Translations = {
           },
           {
             name: "潘先生，行政和物流",
-            details: ["电话（香港）：(+852) 6303 3499", "电子邮件：pahksp@biznetvigator.com"],
+            details: [
+              "电话（香港）：(+852) 6303 3499",
+              "电子邮件：pahksp@biznetvigator.com",
+            ],
           },
         ],
       },
@@ -1123,20 +1186,23 @@ export const translations: Translations = {
         message: "消息",
         submit: "发送消息",
         success: "感谢您的消息。我们将尽快回复您！",
+        error: "抱歉，发送消息时出现错误。请重试或直接联系我们。",
+        sending: "发送中...",
       },
     },
     footer: {
-      description: "太平洋农业有限公司（香港）有限公司在全球提供创新的农业化学解决方案。",
+      description: "太平洋科农有限公司在全球提供创新的农业化学解决方案。",
       contact: "联系",
       quickLinks: "快速链接",
-      copyright: "© {year} 太平洋农业有限公司（香港）有限公司。版权所有。",
+      copyright: "© {year} 太平洋科农有限公司。版权所有。",
     },
     common: {
       learnMore: "了解更多",
       contactUs: "联系我们",
       readyToDiscuss: "准备好讨论您的具体需求？",
       ourTeamHelp: "我们的团队在此帮助您找到合适的解决方案。",
-      pageUnderConstruction: "此页面正在建设中。我们正在努力为您提供详细信息。请稍后再查看或联系我们以获取更多信息。",
+      pageUnderConstruction:
+        "此页面正在建设中。我们正在努力为您提供详细信息。请稍后再查看或联系我们以获取更多信息。",
       interestedInOurProducts: "对我们的高性能化学解决方案感兴趣吗？",
       getInTouch: "联系我们",
       comingSoon: "即将推出",
@@ -1145,9 +1211,9 @@ export const translations: Translations = {
       downloadPDF: "下载PDF",
     },
     mediaRoom: {
-      subtitle: "了解太平洋农业有限公司的最新新闻、活动和见解。",
+      subtitle: "了解太平洋科农有限公司的最新新闻、活动和见解。",
       comingSoonMessage:
-        "我们正在努力为您带来最新的新闻、资源和即将举行的活动。请稍后再来查看太平洋农业有限公司的活动和行业洞察更新。",
+        "我们正在努力为您带来最新的新闻、资源和即将举行的活动。请稍后再来查看太平洋科农有限公司的活动和行业洞察更新。",
     },
     appendix: {
       subtitle: "额外资源、参考资料和补充信息。",
@@ -1156,22 +1222,22 @@ export const translations: Translations = {
       documents: [],
     },
   },
-}
+};
 
 export function useTranslations() {
-  const { language } = useLanguage()
+  const { language } = useLanguage();
 
   return {
-    t: (key: string) => {
-      const keys = key.split(".")
-      let value = translations[language]
+    t: (key: string): any => {
+      const keys = key.split(".");
+      let value: any = translations[language];
 
       for (const k of keys) {
-        if (value[k] === undefined) return key
-        value = value[k]
+        if (value[k] === undefined) return key;
+        value = value[k];
       }
 
-      return value
+      return value;
     },
-  }
+  };
 }

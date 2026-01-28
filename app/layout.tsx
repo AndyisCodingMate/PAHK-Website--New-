@@ -1,46 +1,29 @@
-"use client"
 import './globals.css'
 import type React from "react"
-
-import { useEffect } from "react"
-import { usePathname } from "next/navigation"
 import { Inter } from "next/font/google"
-import "./globals.css"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import { ThemeProvider } from "@/contexts/ThemeContext"
-import { LanguageProvider } from "@/contexts/LanguageContext"
+import ClientLayout from "@/components/client-layout"
 
 const inter = Inter({ subsets: ["latin"] })
+
+export const metadata = {
+  title: "Pacific Agriscience Hong Kong",
+  description: "Leading provider of innovative agricultural solutions and crop protection products across Asia Pacific.",
+  generator: 'v0.app'
+}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const pathname = usePathname()
-
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-
   return (
     <html lang="en">
       <body className={`${inter.className} bg-page text-page`}>
-        <ThemeProvider>
-          <LanguageProvider>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-1">{children}</main>
-              <Footer />
-            </div>
-          </LanguageProvider>
-        </ThemeProvider>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   )
 }
-
-
-
 

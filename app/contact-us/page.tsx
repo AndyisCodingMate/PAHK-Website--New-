@@ -1,15 +1,16 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { MapPin, Phone, Clock, User, MessageSquare } from "lucide-react"
-import FadeInSection from "@/components/fade-in-section"
-import { useTranslations } from "@/translations"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { MapPin, Phone, Clock, User, MessageSquare } from "lucide-react";
+import FadeInSection from "@/components/fade-in-section";
+import { useTranslations } from "@/translations";
+import { sendContactEmail } from "@/app/actions/send-email";
 
 export default function ContactUs() {
-  const { t } = useTranslations()
+  const { t } = useTranslations();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,52 +18,60 @@ export default function ContactUs() {
     company: "",
     subject: "",
     message: "",
-  })
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      const data = await response.json();
-      console.log(data);
-      alert(t("contact.form.success"));
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        subject: "",
-        message: "",
-      });
+      const result = await sendContactEmail(formData);
+
+      if (result.success) {
+        alert(t("contact.form.success"));
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert(t("contact.form.error"));
+      }
     } catch (error) {
-      console.error('Error:', error);
-      alert(t("contact.form.error")); // Optional error message
+      console.error("Error:", error);
+      alert(t("contact.form.error"));
+    } finally {
+      setIsSubmitting(false);
     }
   };
-  
-  
-  
+
   return (
     <FadeInSection>
       <div className="bg-page">
         {/* Hero Section */}
         <div className="bg-green-700 text-white">
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{t("contact.hero.title")}</h1>
-            <p className="mt-6 max-w-xl text-xl">{t("contact.hero.subtitle")}</p>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              {t("contact.hero.title")}
+            </h1>
+            <p className="mt-6 max-w-xl text-xl">
+              {t("contact.hero.subtitle")}
+            </p>
           </div>
         </div>
 
@@ -71,8 +80,12 @@ export default function ContactUs() {
           <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-2xl font-bold text-green-700 dark:text-green-300">{t("contact.getInTouch.title")}</h2>
-              <p className="mt-4 text-lg text-page">{t("contact.getInTouch.subtitle")}</p>
+              <h2 className="text-2xl font-bold text-green-700 dark:text-green-300">
+                {t("contact.getInTouch.title")}
+              </h2>
+              <p className="mt-4 text-lg text-page">
+                {t("contact.getInTouch.subtitle")}
+              </p>
 
               <dl className="mt-8 space-y-6">
                 <div className="flex">
@@ -80,7 +93,9 @@ export default function ContactUs() {
                     <MapPin className="h-6 w-6 text-green-600 dark:text-green-400" />
                   </div>
                   <div className="ml-3 text-base text-page">
-                    <dt className="font-medium">{t("contact.getInTouch.address.label")}</dt>
+                    <dt className="font-medium">
+                      {t("contact.getInTouch.address.label")}
+                    </dt>
                     <dd className="mt-1">
                       Room 2006-8, 20/F, TWO CHINACHEM EXCHANGE SQUARE
                       <br />
@@ -94,7 +109,9 @@ export default function ContactUs() {
                     <Phone className="h-6 w-6 text-green-600 dark:text-green-400" />
                   </div>
                   <div className="ml-3 text-base text-page">
-                    <dt className="font-medium">{t("contact.getInTouch.phone.label")}</dt>
+                    <dt className="font-medium">
+                      {t("contact.getInTouch.phone.label")}
+                    </dt>
                     <dd className="mt-1">(+852) 2528 5926</dd>
                   </div>
                 </div>
@@ -104,16 +121,22 @@ export default function ContactUs() {
                     <Clock className="h-6 w-6 text-green-600 dark:text-green-400" />
                   </div>
                   <div className="ml-3 text-base text-page">
-                    <dt className="font-medium">{t("contact.getInTouch.hours.label")}</dt>
-                    <dd className="mt-1">{t("contact.getInTouch.hours.value")}</dd>
+                    <dt className="font-medium">
+                      {t("contact.getInTouch.hours.label")}
+                    </dt>
+                    <dd className="mt-1">
+                      {t("contact.getInTouch.hours.value")}
+                    </dd>
                   </div>
                 </div>
               </dl>
 
               {/* Staff Information */}
-              <h3 className="mt-12 text-xl font-bold text-green-700 dark:text-green-300">{t("contact.team.title")}</h3>
+              <h3 className="mt-12 text-xl font-bold text-green-700 dark:text-green-300">
+                {t("contact.team.title")}
+              </h3>
               <dl className="mt-4 space-y-6">
-                {t("contact.team.members").map((member, index) => (
+                {t("contact.team.members").map((member: any, index: number) => (
                   <div key={index} className="flex">
                     <div className="flex-shrink-0">
                       <User className="h-6 w-6 text-green-600 dark:text-green-400" />
@@ -121,9 +144,11 @@ export default function ContactUs() {
                     <div className="ml-3 text-base text-page">
                       <dt className="font-medium">{member.name}</dt>
                       <dd className="mt-1">
-                        {member.details.map((detail, detailIndex) => (
-                          <div key={detailIndex}>{detail}</div>
-                        ))}
+                        {member.details.map(
+                          (detail: any, detailIndex: number) => (
+                            <div key={detailIndex}>{detail}</div>
+                          ),
+                        )}
                       </dd>
                     </div>
                   </div>
@@ -139,10 +164,12 @@ export default function ContactUs() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <MessageSquare className="h-6 w-6 text-green-600 dark:text-green-400" />
-                    <span className="font-medium text-page">{t("contact.connect.whatsapp")}</span>
+                    <span className="font-medium text-page">
+                      {t("contact.connect.whatsapp")}
+                    </span>
                   </div>
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/candy%20whatsapp%20QR-CtNF55IqjBzQAI5i5Zr7gZbPIvmn8H.png"
+                    src="/images/design-mode/candy%20whatsapp%20QR.png"
                     alt="WhatsApp QR Code"
                     width={150}
                     height={150}
@@ -162,17 +189,20 @@ export default function ContactUs() {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-2">
                     <MessageSquare className="h-6 w-6 text-green-600 dark:text-green-400" />
-                    <span className="font-medium text-page">{t("contact.connect.wechat")}</span>
+                    <span className="font-medium text-page">
+                      {t("contact.connect.wechat")}
+                    </span>
                   </div>
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/candy%20wechat%20QR-UJ5bBi5DGxxpxxlPw7iKh3A5vf0SeL.png"
+                    src="/images/design-mode/candy%20wechat%20QR.png"
                     alt="WeChat QR Code"
                     width={150}
                     height={150}
                     className="rounded-lg"
                   />
                   <p className="text-page">
-                    {t("contact.connect.wechatId")} <span className="font-medium">candyysh0528</span>
+                    {t("contact.connect.wechatId")}{" "}
+                    <span className="font-medium">candyysh0528</span>
                   </p>
                 </div>
               </div>
@@ -180,10 +210,18 @@ export default function ContactUs() {
 
             {/* Contact Form */}
             <div className="bg-white dark:bg-gray-800 p-8 shadow-lg rounded-lg">
-              <h2 className="text-2xl font-bold text-green-700 dark:text-green-300">{t("contact.form.title")}</h2>
-              <form onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <h2 className="text-2xl font-bold text-green-700 dark:text-green-300">
+                {t("contact.form.title")}
+              </h2>
+              <form
+                onSubmit={handleSubmit}
+                className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+              >
                 <div className="sm:col-span-2">
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
                     {t("contact.form.name")}
                   </label>
                   <div className="mt-1">
@@ -200,7 +238,10 @@ export default function ContactUs() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
                     {t("contact.form.email")}
                   </label>
                   <div className="mt-1">
@@ -217,7 +258,10 @@ export default function ContactUs() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
                     {t("contact.form.phone")}
                   </label>
                   <div className="mt-1">
@@ -233,7 +277,10 @@ export default function ContactUs() {
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
                     {t("contact.form.company")}
                   </label>
                   <div className="mt-1">
@@ -249,7 +296,10 @@ export default function ContactUs() {
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
                     {t("contact.form.subject")}
                   </label>
                   <div className="mt-1">
@@ -266,7 +316,10 @@ export default function ContactUs() {
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                  >
                     {t("contact.form.message")}
                   </label>
                   <div className="mt-1">
@@ -285,9 +338,12 @@ export default function ContactUs() {
                 <div className="sm:col-span-2">
                   <button
                     type="submit"
-                    className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-green-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                    disabled={isSubmitting}
+                    className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-green-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {t("contact.form.submit")}
+                    {isSubmitting
+                      ? t("contact.form.sending")
+                      : t("contact.form.submit")}
                   </button>
                 </div>
               </form>
@@ -296,6 +352,5 @@ export default function ContactUs() {
         </div>
       </div>
     </FadeInSection>
-  )
+  );
 }
-

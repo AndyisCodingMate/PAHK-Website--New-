@@ -1,25 +1,30 @@
-'use client';
+"use client";
 
-import { ArrowRight, Download, ExternalLink } from "lucide-react"
-import FadeInSection from "@/components/fade-in-section"
-import { useTranslations } from "@/translations"
+import { ArrowRight, Download, ExternalLink } from "lucide-react";
+import FadeInSection from "@/components/fade-in-section";
+import { useTranslations } from "@/translations";
 
 export default function Appendix() {
-  const { t } = useTranslations()
+  const { t } = useTranslations();
 
   const documents = [
     {
       title: "Slideshare on Chinese AgChem Manufacturers",
-      description: "Presentation on Chinese AgChem Manufacturers going downstream",
+      description:
+        "Presentation on Chinese AgChem Manufacturers going downstream",
       link: "https://www.slideshare.net/PacificAgriscience/chinese-agchem-manufacturers-going-downstream-v2-19102012",
-      icon: <ExternalLink className="h-6 w-6 text-green-600 dark:text-green-400" />,
+      icon: (
+        <ExternalLink className="h-6 w-6 text-green-600 dark:text-green-400" />
+      ),
       isExternal: true,
     },
     {
       title: "Live Speech by CS Liew on Chinese AgChem Manufacturers",
       description: "Video of CS Liew's speech on Chinese AgChem Manufacturers",
       link: "https://www.youtube.com/watch?v=LPM3agsN0tM&t=2s",
-      icon: <ExternalLink className="h-6 w-6 text-green-600 dark:text-green-400" />,
+      icon: (
+        <ExternalLink className="h-6 w-6 text-green-600 dark:text-green-400" />
+      ),
       isExternal: true,
     },
     {
@@ -80,7 +85,8 @@ export default function Appendix() {
     },
     {
       title: "PACIFIC POWER™ Brochure",
-      description: "Details on our bio-organic granule for blending with chemical fertilizers",
+      description:
+        "Details on our bio-organic granule for blending with chemical fertilizers",
       link: "/PACIFIC POWER Brochure.pdf",
       icon: <Download className="h-6 w-6 text-green-600 dark:text-green-400" />,
       isExternal: false,
@@ -88,13 +94,14 @@ export default function Appendix() {
     },
     {
       title: "Sustainable Products Brochure",
-      description: "PAHK - New Products Portfolio (Sustainable Products) - Updated on Apr 21, 2025",
+      description:
+        "PAHK - New Products Portfolio (Sustainable Products) - Updated on Apr 21, 2025",
       link: "/Sustainable Products Brochure.pdf",
       icon: <Download className="h-6 w-6 text-green-600 dark:text-green-400" />,
       isExternal: false,
       filename: "PAHK - Sustainable Products Brochure.pdf",
     },
-  ]
+  ];
 
   return (
     <FadeInSection>
@@ -102,7 +109,9 @@ export default function Appendix() {
         {/* Hero Section */}
         <div className="bg-green-700 text-white">
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{t("navigation.appendix")}</h1>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              {t("navigation.appendix")}
+            </h1>
             <p className="mt-6 max-w-xl text-xl">{t("appendix.subtitle")}</p>
           </div>
         </div>
@@ -112,15 +121,24 @@ export default function Appendix() {
           <h2 className="text-3xl font-bold tracking-tight text-green-800 dark:text-green-300">
             {t("appendix.documentsAndResources")}
           </h2>
-          <p className="mt-4 text-lg text-page">{t("appendix.documentsDescription")}</p>
+          <p className="mt-4 text-lg text-page">
+            {t("appendix.documentsDescription")}
+          </p>
 
           <div className="mt-12 space-y-6">
-            {documents.map((item, index) => (
-              <div key={index} className="flex items-start p-6 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            {documents.map((item: any, index: number) => (
+              <div
+                key={index}
+                className="flex items-start p-6 bg-gray-50 dark:bg-gray-700 rounded-lg"
+              >
                 <div className="flex-shrink-0 mr-4">{item.icon}</div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</h3>
-                  <p className="mt-1 text-gray-600 dark:text-gray-300">{item.description}</p>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-gray-600 dark:text-gray-300">
+                    {item.description}
+                  </p>
                   <div className="mt-4">
                     <a
                       href={item.link}
@@ -129,7 +147,9 @@ export default function Appendix() {
                       className="inline-flex items-center text-sm font-medium text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
                       download={item.isExternal ? undefined : item.filename}
                     >
-                      {item.isExternal ? t("common.visitWebsite") : t("common.downloadPDF")}
+                      {item.isExternal
+                        ? t("common.visitWebsite")
+                        : t("common.downloadPDF")}
                       <ArrowRight className="ml-1 h-4 w-5" />
                     </a>
                   </div>
@@ -140,6 +160,5 @@ export default function Appendix() {
         </div>
       </div>
     </FadeInSection>
-  )
+  );
 }
-

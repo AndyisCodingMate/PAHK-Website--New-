@@ -24,4 +24,3 @@ export default function TranslatedContent({ children, translationKey }: Translat
 
   return <>{content}</>
 }
-
