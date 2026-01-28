@@ -16,7 +16,7 @@ export default function MarketIntelligence() {
       <div className="relative bg-green-800 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80"
+            src="/images/market-intelligence.jpg"
             alt="Market Intelligence"
             fill
             className="object-cover opacity-30"

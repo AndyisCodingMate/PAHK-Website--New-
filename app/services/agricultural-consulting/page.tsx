@@ -15,7 +15,7 @@ export default function AgriculturalConsulting() {
       <div className="relative bg-green-800 text-white">
         <div className="absolute inset-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1590682680695-43b964a3ae17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+            src="/images/agricultural-consulting.jpg"
             alt="Agricultural Consulting"
             fill
             className="object-cover opacity-30"

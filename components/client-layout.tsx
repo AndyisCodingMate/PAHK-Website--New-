@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import type React from "react";
-import { useEffect } from "react";
-import { ThemeProvider } from "@/contexts/ThemeContext";
-import { LanguageProvider } from "@/contexts/LanguageContext";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import type React from "react"
+import { useEffect } from "react"
+import { ThemeProvider } from "@/contexts/ThemeContext"
+import { LanguageProvider } from "@/contexts/LanguageContext"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 export default function ClientLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <ThemeProvider>
@@ -26,5 +26,5 @@ export default function ClientLayout({
         </div>
       </LanguageProvider>
     </ThemeProvider>
-  );
+  )
 }

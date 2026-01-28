@@ -15,7 +15,7 @@ export default function MediaRoom() {
         <div className="relative bg-gray-900 text-white">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+              src="/images/media-room.jpg"
               alt="Media room background"
               fill
               className="object-cover opacity-30"

@@ -1,7 +1,7 @@
 import './globals.css'
 import type React from "react"
 import { Inter } from "next/font/google"
-import ClientLayout from "@/components/client-layout"
+import ClientLayout from "../components/client-layout"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -26,4 +26,3 @@ export default function RootLayout({
     </html>
   )
 }
-
