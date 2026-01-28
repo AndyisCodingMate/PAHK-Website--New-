@@ -14,10 +14,11 @@ export default function AboutUs() {
         <div className="relative bg-gray-900 text-white">
           <div className="absolute inset-0 overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
+              src="/images/about-hero.jpg"
               alt="Agricultural landscape"
               fill
               className="object-cover opacity-30"
+              unoptimized
             />
           </div>
           <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
@@ -115,11 +116,12 @@ export default function AboutUs() {
             </div>
             <div className="mt-12">
               <Image
-                src="/images/design-mode/Super%20Map.png"
+                src="/images/design-mode/Super Map.png"
                 alt="Pacific Agriscience Global Network Map"
                 width={1920}
                 height={1080}
                 className="w-full rounded-lg shadow-lg"
+                unoptimized
               />
             </div>
           </div>
