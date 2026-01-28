@@ -1,4 +1,4 @@
-// File: /home/andy/PAHK-Website--New-/app/media-room/page.tsx
+// File: /home/ubuntu/PAHK-Website--New-/app/media-room/page.tsx
 import * as entry from '../../../../app/media-room/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

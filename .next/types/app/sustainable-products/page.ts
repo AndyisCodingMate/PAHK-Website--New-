@@ -1,4 +1,4 @@
-// File: /home/andy/PAHK-Website--New-/app/sustainable-products/page.tsx
+// File: /home/ubuntu/PAHK-Website--New-/app/sustainable-products/page.tsx
 import * as entry from '../../../../app/sustainable-products/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
