@@ -1,4 +1,4 @@
-// File: /home/ubuntu/PAHK-Website--New-/app/appendix/page.tsx
+// File: /home/andy/PAHK-Website--New-/app/appendix/page.tsx
 import * as entry from '../../../../app/appendix/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

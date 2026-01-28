@@ -1,4 +1,4 @@
-// File: /home/ubuntu/PAHK-Website--New-/app/generic-products/page.tsx
+// File: /home/andy/PAHK-Website--New-/app/generic-products/page.tsx
 import * as entry from '../../../../app/generic-products/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
